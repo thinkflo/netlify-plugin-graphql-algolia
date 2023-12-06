@@ -1,6 +1,6 @@
 {
   "name": "netlify-plugin-graphql-algolia",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Netlify Build plugin - An Advanced Algolia Indexer that uses GraphQL queries and transformers to customize one or many indexes and optionally upserting only changed records or full indexes",
   "license": "MIT",
   "author": "Thinkflo",
@@ -74,10 +74,10 @@
     "strip-ansi": "^7.0.0",
     "username": "^6.0.0",
     "yargs": "^17.0.0"
-  },  
+  },
   "dependencies": {
     "algoliasearch": "^4.20.0"
-  },  
+  },
   "ava": {
     "verbose": true,
     "timeout": "100s",
