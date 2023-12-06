@@ -1,0 +1,10 @@
+name: netlify-plugin-graphql-algolia
+inputs: 
+  - name: enablePartialUpdates
+    required: false
+    description: Specifies whether to enable partial updates for the Algolia index. When set to `true`, only modified or new items are updated in the index, enhancing efficiency and reducing operational load.
+    default: true
+  - name: chunkSize
+    required: false
+    description: Determines the size of each chunk of data sent to Algolia for indexing. A larger chunk size can improve indexing efficiency but may require more memory. The optimal value depends on the size and complexity of your data.
+    default: 1000
