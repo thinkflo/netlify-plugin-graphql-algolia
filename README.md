@@ -21,6 +21,36 @@ Here we have an example with some data that might not be very relevant, but will
 ## Install
 * `npm install netlify-plugin-graphql-algolia -S`
 
+Add it to your `netlify.toml` file.  
+
+```toml
+
+[[plugins]]
+
+package = "netlify-plugin-graphql-algolia"
+  
+# All inputs are optional, so you can omit this section.
+
+# Defaults are shown below.
+
+[plugins.inputs]
+
+# Specifies whether to enable partial updates for the Algolia index. 
+# When set to `true`, only modified or new items are updated in the index, 
+# enhancing efficiency and reducing operational load.
+
+enablePartialUpdates = true
+
+# Determines the size of each chunk of data sent to Algolia for indexing. 
+# A larger chunk size can improve indexing efficiency but may require more 
+# memory. The optimal value depends on the size and complexity of your data.
+
+chunkSize = 1000
+
+```
+
+You also require a mandatory `algolia.config.js` in the root of your project which exports a collection object.  See the Setup section on the syntax of this configuration file.
+
 
 ## Setup
 
@@ -69,9 +99,10 @@ export const collections = [
 ];
 ```
 
+
 ### Partial Updates
 
-By default all items will be reindexed on every build. To enable only indexing new, changed and deleted items, set `enablePartialUpdates` to `true` and make sure `matchFields` is correct for every collection.
+By default all items will be reindexed on every build. To enable only indexing new, changed and deleted items, set `enablePartialUpdates` to `true` in netlify.toml and make sure `matchFields` in the collections is correct for every collection.
 
 ## QnA
 
