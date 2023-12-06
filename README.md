@@ -49,7 +49,7 @@ chunkSize = 1000
 
 ```
 
-You also require a mandatory `algolia.config.js` in the root of your project which exports a collection object.  See the Setup section on the syntax of this configuration file.
+You also require a mandatory `algolia.config.js` in the root of your project which exports a collections array.  See the Setup section on the syntax of this configuration file.
 
 
 ## Setup
